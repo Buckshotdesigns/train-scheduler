@@ -17,7 +17,7 @@
             <h1>Anytime is Train Time</h1>
             <h2>Choo Choo Chee Chee</h2>
         </div>
-        <h3>Current Train Schedule</h3>
+        <h3 id="current-train">Current Train Schedule</h3>
             <table>
                 <thead>
                     <tr>
@@ -28,9 +28,30 @@
                         <th>Minutes Away</th>
                     </tr>
                 </thead>
+                <tbody></tbody>
             </table>
+         <h3>Add Train</h3>
 
+            <form>
+                    <div>
+                            <label for="train-name-input">Train Name</label>
+                            <input type="text" id="train-name-input">
+                        </div>
+                        <div>
+                            <label for="destination-input">Destination</label>
+                            <input type="text" id="destination-input">
+                        </div>
+                        <div>
+                            <label for="first-train-input">First Train Time (HH:mm - military time)</label>
+                            <input type="text" id="first-train-input">
+                        </div>
+                        <div>
+                            <label for="frequency-input">Frequency (min)</label>
+                            <input type="text" id="frequency-input">
+                        </div>
+                        <button type="submit" id="add-train-btn">Submit</button>
 
+            </form>
     </div>
 
     <script src= "assets/javascript/app.js"></script>
