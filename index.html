@@ -17,20 +17,23 @@
             <h1>Anytime is Train Time</h1>
             <h2>Choo Choo Chee Chee</h2>
         </div>
-        <h3 id="current-train">Current Train Schedule</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Train Name</th>
-                        <th>Destination</th>
-                        <th>Frequency(Min)</th>
-                        <th>Next Arrival</th>
-                        <th>Minutes Away</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-         <h3>Add Train</h3>
+        <div class="card">
+            <h3 id="current-train" class="text-center">Current Train Schedule</h3>
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(Min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>    
+            <h3>Add Train</h3>
 
             <form>
                     <div>
@@ -49,7 +52,7 @@
                             <label for="frequency-input">Frequency (min)</label>
                             <input type="text" id="frequency-input">
                         </div>
-                        <button type="submit" id="add-train-btn">Submit</button>
+                        <button class="btn btn-primary" type="submit" id="submit-info">Submit</button>
 
             </form>
     </div>
