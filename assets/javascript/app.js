@@ -18,7 +18,7 @@ var config = {
     var destination = $("#destination-input").val().trim();
     var firstTrain = $("#first-train-input").val().trim();
     var frequency = $("#frequency-input").val().trim();
-
+    // making it so all train info must be entered or it returns an alert
         if (trainName != "" &&
             destination != "" &&
             firstTrain != "" &&
