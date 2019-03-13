@@ -19,24 +19,34 @@ var config = {
     var firstTrain = $("#first-train-input").val().trim();
     var frequency = $("#frequency-input").val().trim();
 
-    database.ref().push({
-        trainName: trainName,
-        destination: destination,
-        firstTrain: firstTrain,
-        frequency: frequency
+        if (trainName != "" &&
+            destination != "" &&
+            firstTrain != "" &&
+            frequency != "") {
+
+            database.ref().push({
+            trainName: trainName,
+            destination: destination,
+            firstTrain: firstTrain,
+            frequency: frequency
+            });
+
+        } else {
+
+        alert ("please enter all train information");
+        $("input").val("");
+        return false;
+        }
+
+        $("#train-name-input").val("");
+        $("#destination-input").val("");
+        $("#first-train-input").val("");
+        $("#frequency-input").val("");
+
     });
 
-    $("#train-name-input").val("");
-    $("#destination-input").val("");
-    $("#first-train-input").val("");
-    $("#frequency-input").val("");
-
-});
-
 database.ref().on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.key);
-    console.log(childSnapshot.val());
-
+    
     var name = childSnapshot.val().trainName;
     var destination = childSnapshot.val().destination;
     var frequency = childSnapshot.val().frequency;
@@ -67,8 +77,8 @@ database.ref().on("child_added", function (childSnapshot) {
     
     $("#table > tbody").append(newRow);
 });
-function deleteDocument(documentId) {
-    database.ref().child(documentId).set(null);
-    alert("Train successfully deleted!");
-    location.reload();
-}
+// function deleteDocument(documentId) {
+//     database.ref().child(documentId).set(null);
+//     alert("Train successfully deleted!");
+//     location.reload();
+// }
