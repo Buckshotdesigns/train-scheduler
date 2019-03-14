@@ -1,8 +1,14 @@
 
+body {
+    background-image: url("../images/train.jpg");
+    background-position: center;
+}
 .jumbotron{
     margin-top: 1rem;
 }
-
+#main-card {
+    padding: 1rem;
+}
 th {
     padding: 0 2rem;
    
