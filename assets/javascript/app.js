@@ -77,8 +77,3 @@ database.ref().on("child_added", function (childSnapshot) {
     
     $("#table > tbody").append(newRow);
 });
-// function deleteDocument(documentId) {
-//     database.ref().child(documentId).set(null);
-//     alert("Train successfully deleted!");
-//     location.reload();
-// }
